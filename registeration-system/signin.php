@@ -2,20 +2,18 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registration System PDO</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-</head>
-<body>
 
-    <div class="container">
-        <h3 class="mt-4">เข้าสู่ระบบ</h3>
-        <hr>
+<!-- ---------------------import head------------------------ -->
+<?php include '../component/head.php';?>
+
+ <body class="text-center">
+
+ <!-- <main class="form-signin"> -->
+ <div class="p-5 my-4 rounded-3">
+
+ <div class="d-flex justify-content-center">
         <form action="signin_db.php" method="post">
-            <?php if(isset($_SESSION['error'])) { ?>
+        <?php if(isset($_SESSION['error'])) { ?>
                 <div class="alert alert-danger" role="alert">
                     <?php 
                         echo $_SESSION['error'];
@@ -31,19 +29,27 @@
                     ?>
                 </div>
             <?php } ?>
-            <div class="mb-3">
+
+            <img class="img-fluid" src="../component/image/logoCrop.png" alt="" width="130" height="100">
+            <h1 class="h3 mb-3 fw-normal">เข้าสู่ระบบ</h1>
+
+            <div class="form-floating">
+                <input type="email" class="form-control" name="email" aria-describedby="email" placeholder="name@example.com">
                 <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" name="email" aria-describedby="email">
             </div>
-            <div class="mb-3">
+            <div class="form-floating">
+                <input type="password" class="form-control" name="password" placeholder="Password">
                 <label for="password" class="form-label">Password</label>
-                <input type="password" class="form-control" name="password">
             </div>
-            <button type="submit" name="signin" class="btn btn-primary">Sign In</button>
+            <button type="submit" name="signin" class="w-100 btn btn-lg btn-primary mt-3">Sign In</button>
+            <hr>
+        <p>คลิกที่นี่เพื่อ <a href="index.php">สมัครเป็น Admin</a></p>
         </form>
-        <hr>
-        <p>ยังไม่เป็นสมาชิกใช่ไหม คลิ๊กที่นี่เพื่อ <a href="index.php">สมัครสมาชิก</a></p>
-    </div>
-    
-</body>
-</html>
+        
+ </div>
+ </div>
+</body> 
+
+</html> 
+
+

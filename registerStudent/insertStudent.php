@@ -42,7 +42,7 @@
                 $row = $check_email->fetch(PDO::FETCH_ASSOC);
 
                 if ($row['email'] == $email) {
-                    $_SESSION['warning'] = "มีอีเมลนี้อยู่ในระบบแล้ว <a href='registerStudent.php'>คลิ๊กที่นี่</a> เพื่อเข้าสู่ระบบ";
+                    $_SESSION['warning'] = "มีอีเมลนี้ได้ทำการลงทะเบียนไปเเล้ว";
                     header("location: registerStudent.php");
                 } else if (!isset($_SESSION['error'])) {
                     $stmt = $conn->prepare("INSERT INTO members(name,surname,birthday,address,phone,email,school,education) 
@@ -58,10 +58,9 @@
 
                    
                     $stmt->execute();
-                    $_SESSION['success'] = "สมัครสมาชิกนักเรียนเรียบร้อยแล้ว! <a href='registerStudent.php' class='alert-link'>คลิ๊กที่นี่</a> เพื่อเข้าสู่ระบบ";
-                    $stmt = "Insert Successfully...";
-                    header("refresh:2;registerStudent.php");
-                    //header("location: registerStudent.php");
+                    $_SESSION['success'] = "สมัครสมาชิกนักเรียนเรียบร้อยแล้ว! <a href='registerStudent.php' class='alert-link'>คลิกที่นี่</a> เพื่อสมัครคอร์ส";
+                    // header("refresh:2;registerStudent.php");
+                    header("location: registerStudent.php");
                 } else {
                     $_SESSION['error'] = "มีบางอย่างผิดพลาด";
                     header("location: registerStudent.php");
