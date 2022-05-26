@@ -2,9 +2,10 @@
 <?php 
 
     session_start();
-    require_once '../registeration-system/config/db.php';
+    require_once 'config/db.php';
 
     if (isset($_POST['signupStudent'])) {
+        $random = uniqid();
         $name	 = $_POST['name'];
         $surname = $_POST['surname'];
         $birthday = $_POST['birthday'];
@@ -45,8 +46,9 @@
                     $_SESSION['warning'] = "มีอีเมลนี้ได้ทำการลงทะเบียนไปเเล้ว";
                     header("location: registerStudent.php");
                 } else if (!isset($_SESSION['error'])) {
-                    $stmt = $conn->prepare("INSERT INTO members(name,surname,birthday,address,phone,email,school,education) 
-                                            VALUES(:name,:surname,:birthday,:address, :phone,:email,:school,:education)");
+                    $stmt = $conn->prepare("INSERT INTO members(id, name,surname,birthday,address,phone,email,school,education) 
+                                            VALUES(:id,:name,:surname,:birthday,:address, :phone,:email,:school,:education)");
+                    $stmt->bindParam(":id", $random);
                     $stmt->bindParam(":name", $name);
                     $stmt->bindParam(":surname", $surname);
                     $stmt->bindParam(":birthday", $birthday);
@@ -58,7 +60,7 @@
 
                    
                     $stmt->execute();
-                    $_SESSION['success'] = "สมัครสมาชิกนักเรียนเรียบร้อยแล้ว! <a href='registerStudent.php' class='alert-link'>คลิกที่นี่</a> เพื่อสมัครคอร์ส";
+                    $_SESSION['success'] = 'สมัครสมาชิกนักเรียนเรียบร้อยแล้ว! <br><strong>รหัสนักเรียนคือ: ' .$random. '</strong>';
                     // header("refresh:2;registerStudent.php");
                     header("location: registerStudent.php");
                 } else {
@@ -74,3 +76,4 @@
 
 
 ?>
+

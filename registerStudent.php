@@ -2,7 +2,7 @@
 <?php
 
 session_start();
-require_once '../registeration-system/config/db.php';
+require_once 'config/db.php';
 // if (!isset($_SESSION['user_login'])) {
 //   $_SESSION['error'] = 'กรุณาเข้าสู่ระบบ!';
 //   header('location: ../registeration-system/signin.php');
@@ -12,13 +12,13 @@ require_once '../registeration-system/config/db.php';
 <html lang="en">
 
 <!-- ---------------------import head------------------------ -->
-<?php include '../component/head.php';?>
+<?php include 'component/head.php';?>
 
 
 <body>
 
   <!-- ---------------------import header------------------------ -->
-  <?php include '../component/header.php';?>
+  <?php include 'component/header.php';?>
 
   <div class="p-5 my-1 rounded-3">
     <div class="container-fluid">
@@ -120,14 +120,14 @@ require_once '../registeration-system/config/db.php';
       <div class="col-md-7 col-lg-5 bg-light text-white rounded-3 p-5">
       <!-- <div class="col-md-7 col-lg-5 text-white rounded-3 p-5"> -->
 
-      <img src="../component/image/coverStudent.jpeg" class="img-fluid" alt="coverStudent">
+      <img src="component/image/coverStudent.jpeg" class="img-fluid" alt="coverStudent">
 
       </div>
 
     </div>
 
     <!-- ----------------------import footer-------------------------- -->
-    <?php include '../component/footer.php';?>
+    <?php include 'component/footer.php';?>
 
   </div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>

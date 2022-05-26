@@ -4,7 +4,7 @@
 <html lang="en">
 
 <!-- ---------------------import head------------------------ -->
-<?php include '../component/head.php';?>
+<?php include 'component/head.php';?>
 
  <body class="text-center">
 
@@ -30,7 +30,7 @@
                 </div>
             <?php } ?>
 
-            <img class="img-fluid" src="../component/image/logoCrop.png" alt="" width="130" height="100">
+            <img class="img-fluid" src="component/image/logoCrop.png" alt="" width="130" height="100">
             <h1 class="h3 mb-3 fw-normal">เข้าสู่ระบบ</h1>
 
             <div class="form-floating">

@@ -8,7 +8,7 @@
 <html lang="en">
 
 <!-- ---------------------import head------------------------ -->
-<?php include '../component/head.php';?>
+<?php include 'component/head.php';?>
 
 <body>
 <div class="p-5 my-4 rounded-3">
@@ -81,13 +81,13 @@
 
     <div class="col-md-7 col-lg-6 bg-light text-white rounded-3 p-5">
 
-    <img src="../component/image/staff.jpeg" class="img-fluid" alt="staff">
+    <img src="component/image/staff.jpeg" class="img-fluid" alt="staff">
 
     </div>
 
     </div>
       <!-- ----------------------import footer-------------------------- -->
-      <?php include '../component/footer.php';?>
+      <?php include 'component/footer.php';?>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 

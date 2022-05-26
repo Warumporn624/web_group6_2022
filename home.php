@@ -65,7 +65,7 @@
         <h3 class="mt-4">Welcome Admin, <?php echo $row['firstname'] . ' ' . $row['lastname'] ?></h3>
         
         <a href="course.php" class="btn btn-danger">course</a>
-        <a href="../registerStudent/registerStudent.php" class="btn btn-danger">register</a> 
+        <a href="registerStudent.php" class="btn btn-danger">register</a> 
 
 
         </div>
