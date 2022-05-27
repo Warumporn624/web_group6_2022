@@ -24,7 +24,7 @@ if (isset($_SESSION['user_login'])) {
               	<a href="../thebrain/registerStudent.php" class="nav-item nav-link">ลงทะเบียนนักเรียนใหม่</a>
             </div>
             <div class="navbar-nav ms-auto">              	
-                <a href="../thebrain/signout.php" class="nav-item nav-link">Logout</a>
+                <a href="../thebrain/signout.php" class="nav-item nav-link">ออกจากระบบ</a>
             </div>
         </div>
     </div>

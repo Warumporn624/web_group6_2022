@@ -111,6 +111,9 @@
 
                 <div class="col-md-7 col-lg-6 bg-light text-white rounded-3 p-3">
 
+                <img src="component/image/editPic.jpg" class="img-fluid" alt="coverStudent">
+
+
                 </div>
 
             </div>
