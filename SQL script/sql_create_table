@@ -1,0 +1,57 @@
+CREATE TABLE `courses` (
+ `id` char(5) NOT NULL,
+ `subject` varchar(255) NOT NULL,
+ `title` char(30) NOT NULL,
+ `detail` text DEFAULT NULL,
+ `price` int(10) unsigned NOT NULL,
+ `hour` decimal(5,2) unsigned NOT NULL,
+ `lecturer` varchar(45) NOT NULL,
+ PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
+
+-----------------------------------
+
+CREATE TABLE `members` (
+ `id` varchar(255) NOT NULL,
+ `name` char(45) NOT NULL,
+ `surname` char(45) NOT NULL,
+ `birthday` date NOT NULL,
+ `address` char(255) NOT NULL,
+ `phone` char(10) NOT NULL,
+ `email` char(255) NOT NULL,
+ `school` char(45) NOT NULL,
+ `education` char(4) NOT NULL,
+ `regdate` date NOT NULL DEFAULT current_timestamp(),
+ PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
+
+-----------------------------------
+
+CREATE TABLE `reg_courses` (
+ `id_member` char(255) NOT NULL,
+ `id_course` char(5) NOT NULL,
+ `regdate` date NOT NULL DEFAULT current_timestamp(),
+ `expdate` date DEFAULT NULL,
+ `status` int(10) unsigned NOT NULL DEFAULT 0,
+ `givenhour` decimal(6,0) unsigned DEFAULT NULL,
+ PRIMARY KEY (`id_member`,`regdate`,`id_course`),
+ KEY `id_course_idx` (`id_course`),
+ CONSTRAINT id_course FOREIGN KEY (`id_course`) REFERENCES courses (`id`) ON DELETE NO ACTION ON UPDATE NO  ACTION,
+  CONSTRAINT id_member FOREIGN KEY (`id_member`) REFERENCES members (`id`) ON DELETE NO ACTION
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
+
+-----------------------------------
+
+CREATE TABLE `users` (
+ `id` int(20) NOT NULL AUTO_INCREMENT,
+ `firstname` varchar(255) NOT NULL,
+ `lastname` varchar(255) NOT NULL,
+ `email` varchar(255) NOT NULL,
+ `password` varchar(255) NOT NULL,
+ `urole` varchar(255) NOT NULL,
+ `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
+ PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4
+
+
+
