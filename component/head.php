@@ -21,6 +21,10 @@
         body {
             font-family: 'Kanit', sans-serif;
         }
+
+        .table-responsive {
+            max-height:300px;
+        }
     </style>
 
 </head>

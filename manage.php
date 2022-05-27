@@ -140,12 +140,12 @@ echo $_SESSION['error'];
             <thead>
                 <tr>
                 <th scope="col">ID</th>
-            <th scope="col">Subject</th>
-            <th scope="col">Title</th>
-            <th scope="col">Price</th>
-            <th scope="col">Hour</th>
-            <th scope="col">Lecturer</th>
-            <th scope="col">Detail</th>
+            <th scope="col">Subject วิชา</th>
+            <th scope="col">Title เรื่อง</th>
+            <th scope="col">Price ราคา</th>
+            <th scope="col">Hour ชั่วโมง</th>
+            <th scope="col">Lecturer ผู้สอน </th>
+            <th scope="col">Detail รายละเอียด</th>
             <th scope="col">Action</th>
                 </tr>
             </thead>

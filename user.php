@@ -108,12 +108,13 @@ if (!isset($_SESSION['user_login'])) {
                         </div>
                     </div>
                 </div>
+            </div> <!---close card-->
 
 <!-- --------------------------------------------------   -->
                 
 
 
-            </div> <!---card-->
+           
 
             <h5 class="mt-5"> สรุปรายการตามคอร์ส</h5>
         <div class="table-responsive">
