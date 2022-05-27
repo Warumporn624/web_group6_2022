@@ -1,3 +1,4 @@
+id_member,id_course, regdate, expdate, status,givenhour
 629089a4589ac,CH401,27-05-22,NULL,0,NULL
 62908fb0329fb,MA602,27-05-22,NULL,0,NULL
 62908feec43aa,BI401,27-05-22,NULL,0,NULL
